@@ -1,0 +1,11 @@
+#!/bin/sh
+
+python3 tests.py
+
+if test $? -ne 0
+    then
+        echo "Some tests failed. Commit is prohibited."
+        exit 1
+fi
+
+echo "All tests passed. Commit is allowed."

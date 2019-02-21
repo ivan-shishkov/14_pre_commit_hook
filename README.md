@@ -36,6 +36,27 @@ An example of using the module to solve quadratic equations:
 Roots of quadratic equation: -6.0 4.0
 ```
 
+# How to launch tests
+
+## Manual launch
+
+Need to execute:
+
+```bash
+$ python3 tests.py
+```
+
+## Automatic launch
+
+To run tests automatically, you must configure a **pre-commit hook** before running the **git commit** command:
+
+```bash
+$ cp pre-commit .git/hooks/
+$ chmod +x .git/hooks/pre-commit
+```
+
+After that, when you run the **git commit** command, tests will run automatically. If the tests are passed successfully, the **git commit** command will be executed, otherwise it will be canceled.
+
 # Project Goals
 
 The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
